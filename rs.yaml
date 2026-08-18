@@ -1,0 +1,19 @@
+apiversion: app/V1
+kind: ReplicaSet
+metadata: 
+  name: my-rs
+  labels: 
+    app: rs
+spec:
+  replicas: 2
+  selcetor:
+    matchlabels:
+    app: rs
+  template: 
+    metadata: 
+      labels: 
+        app: rs 
+    spec:
+      container:
+      name: nginx-cont
+      containerport: 80
