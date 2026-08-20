@@ -20,7 +20,7 @@ metadata:
     app: lb
 spec:
   type: LoadBalancer
-  selectorr:
+  selector:
     app: lb
     ports:
     - name: httpd-svc-port
