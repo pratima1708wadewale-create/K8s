@@ -14,7 +14,7 @@ spec:
         app: daemon
     spec:
       containers:
-        -name: daemon-container
-         image: amazon/cloudwatch-agent
-         ports:
-           -containerPort: 80     
+        - name: daemon-container
+          image: nginx:latest
+          ports:
+            -containerPort: 80     
