@@ -1,0 +1,30 @@
+apiVersions: V1
+kind: Pod
+metadata: 
+  name: lbpod
+  labes:
+    app: lb
+spec:
+  containers:
+    -name: apache-container
+     image: httpd:latest
+     ports:
+       -name: apache-port
+        containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: lb-svc
+  lables:
+      app:lb
+spce:
+  type: LoadBalancer
+  selector:
+    app: lb
+  ports:
+    -name: lb-svc-port
+     protocol: TCP
+     port: 80
+     targetPort: 80
+     
