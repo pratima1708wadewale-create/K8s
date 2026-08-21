@@ -11,9 +11,9 @@ spec:
       app: rs
   template:
     metadata:
-      name: rs-template
       labels:
         app: rs
+    spec:    
     containers:
       - name: rs-container
         image: nginx:latest
