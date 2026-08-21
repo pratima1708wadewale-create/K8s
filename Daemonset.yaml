@@ -1,20 +1,21 @@
-apiVersion: app/v1
+apiVersion: apps/v1
 kind: DaemonSet
 metadata:
-  name: my-daemon
+  name: my-DaemonSet
   labels:
-    app: daemon
+    app: ds
 spec:
   selector:
-    matchLables:
-      app: daemon
+    matchLabels:
+      app: ds
   template:
-    metadata:
-      labels:
-        app: daemon
+    metadata:  
+      labels: 
+        app: ds
     spec:
       containers:
-        - name: daemon-container
+        - name: my-ds-container
           image: nginx:latest
           ports:
-            -containerPort: 80     
+          - name: nginx-port
+            containerPort: 80
