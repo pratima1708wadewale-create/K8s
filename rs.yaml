@@ -14,7 +14,7 @@ spec:
       labels:
         app: rs
     spec:    
-    containers:
+      containers:
       - name: rs-container
         image: nginx:latest
         ports:
