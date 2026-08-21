@@ -18,11 +18,12 @@ metadata:
   name: ci-svc
   labels:
     app: myapp
-type: ClusterIP
-selector:
-  app: myapp
-ports:
-  - name: ci-svc-port
-    protocol: TCP
-    port: 80
-    targetPort: 80
+spec:
+  type: ClusterIP
+  selector:
+    app: myapp
+  ports:
+    - name: ci-svc-port
+      protocol: TCP
+      port: 80
+      targetPort: 80
